@@ -1,11 +1,27 @@
 # goit-rdb-hw-04
-<img width="1917" height="1029" alt="task 4 2" src="https://github.com/user-attachments/assets/de61eea2-c26f-4334-8918-da3f8950b923" />
-<img width="1919" height="1033" alt="task 4 3" src="https://github.com/user-attachments/assets/9d9b51cc-34b9-4051-9806-a9280ce621f9" />
-<img width="1919" height="1030" alt="task 4 4-7" src="https://github.com/user-attachments/assets/6be1b3ea-4703-40c3-b6ae-3c2ae791eec9" />
-<img width="1919" height="1035" alt="task 2 1" src="https://github.com/user-attachments/assets/d1845208-7eab-405a-8a3c-417b4e5fe740" />
-<img width="1919" height="1029" alt="task 2 2" src="https://github.com/user-attachments/assets/a26eb28c-9618-430a-adf4-2449e9d56e96" />
-<img width="1919" height="1028" alt="task 2 3" src="https://github.com/user-attachments/assets/dd3dcf8b-7ac2-4716-acac-99e13e7c3271" />
-<img width="1919" height="1034" alt="task 2 4" src="https://github.com/user-attachments/assets/12dfb63d-1340-4f52-b28e-b1cc75bee8c8" />
-<img width="1919" height="1025" alt="task 2 5" src="https://github.com/user-attachments/assets/43bb6e56-845b-4d13-9943-a842751e2567" />
-<img width="1919" height="1035" alt="task 3" src="https://github.com/user-attachments/assets/698792a7-55fd-4630-aa17-466a8e22b128" />
-<img width="1919" height="1029" alt="task 4 1" src="https://github.com/user-attachments/assets/5b022c93-6782-4511-90d4-a2c609e86180" />
+<img width="1919" height="1035" alt="task 2 1" src="https://github.com/user-attachments/assets/79dbdac5-a30a-4759-ab92-1347b19815d5" />
+
+<img width="1919" height="1029" alt="task 2 2" src="https://github.com/user-attachments/assets/621b718f-ff9e-4d8c-843d-6d63f5a36590" />
+
+<img width="1919" height="1028" alt="task 2 3" src="https://github.com/user-attachments/assets/0744747d-dfcd-4fd0-8a11-a956768392a3" />
+
+<img width="1919" height="1034" alt="task 2 4" src="https://github.com/user-attachments/assets/42ed8b08-a3f7-46d5-b465-d149c9cfdb37" />
+
+<img width="1919" height="1025" alt="task 2 5" src="https://github.com/user-attachments/assets/e39cc2ef-9ca7-48c9-97d9-28af686f09f1" />
+
+<img width="1919" height="1035" alt="task 3" src="https://github.com/user-attachments/assets/ba98a5ef-112e-4ab3-b933-429301338800" />
+
+<img width="1919" height="1029" alt="task 4 1" src="https://github.com/user-attachments/assets/3904705e-697f-47fd-b85f-2be5ecf937d3" />
+Після заміни деяких INNER JOIN на LEFT JOIN кількість рядків не змінилася. 
+У обох випадках результат становить 518 рядків.
+
+Це означає, що для кожного запису в таблиці order_details існують відповідні записи в інших таблицях. 
+INNER JOIN повертає лише ті рядки, де є відповідність у всіх таблицях, а LEFT JOIN повертає всі рядки з лівої таблиці.
+
+Оскільки в базі даних усі записи мають відповідності, LEFT JOIN не додав нових рядків і результат залишився таким самим.
+
+<img width="1917" height="1029" alt="task 4 2" src="https://github.com/user-attachments/assets/9e943fd5-6bbd-4aca-a947-7dce50f51a95" />
+
+<img width="1919" height="1033" alt="task 4 3" src="https://github.com/user-attachments/assets/13adf364-c863-41b2-aa5b-33e038d0aabc" />
+
+<img width="1919" height="1030" alt="task 4 4-7" src="https://github.com/user-attachments/assets/7a81f2fd-d837-4899-8667-16c294ff8edf" />
