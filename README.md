@@ -1,4 +1,67 @@
 # goit-rdb-hw-04
+
+Код до 1 та 2 завдання:
+
+CREATE SCHEMA IF NOT EXISTS LibraryManagement;
+USE LibraryManagement;
+
+CREATE TABLE IF NOT EXISTS authors (
+  author_id INT AUTO_INCREMENT PRIMARY KEY,
+  author_name VARCHAR(255) NOT NULL
+);
+
+INSERT INTO authors (author_name)
+VALUES ('Ivan Petrenko'), ('Oksana Kovalenko');
+
+CREATE TABLE IF NOT EXISTS genres (
+  genre_id INT AUTO_INCREMENT PRIMARY KEY,
+  genre_name VARCHAR(100) NOT NULL
+);
+
+INSERT INTO genres (genre_name)
+VALUES ('Roman'), ('Pryhody');
+
+CREATE TABLE IF NOT EXISTS books (
+  book_id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  publication_year YEAR,
+  author_id INT NOT NULL,
+  genre_id INT NOT NULL,
+  CONSTRAINT fk_books_authors
+    FOREIGN KEY (author_id) REFERENCES authors(author_id),
+  CONSTRAINT fk_books_genres
+    FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
+);
+
+INSERT INTO books (title, publication_year, author_id, genre_id)
+VALUES ('Tayemnytsia mista', 2018, 1, 1),
+       ('Podorozh u gory', 2020, 2, 2);
+
+CREATE TABLE IF NOT EXISTS users (
+  user_id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(100) NOT NULL,
+  email VARCHAR(255) NOT NULL
+);
+
+INSERT INTO users (username, email)
+VALUES ('dmytro', 'dmytro@gmail.com'), ('olena', 'olena@gmail.com');
+
+CREATE TABLE IF NOT EXISTS borrowed_books (
+  borrow_id INT AUTO_INCREMENT PRIMARY KEY,
+  book_id INT NOT NULL,
+  user_id INT NOT NULL,
+  borrow_date DATE NOT NULL,
+  return_date DATE,
+  CONSTRAINT fk_borrowed_books_books
+    FOREIGN KEY (book_id) REFERENCES books(book_id),
+  CONSTRAINT fk_borrowed_books_users
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+INSERT INTO borrowed_books (book_id, user_id, borrow_date, return_date)
+VALUES (1, 1, '2026-01-10', NULL),
+       (2, 2, '2026-01-15', '2026-01-25');
+
 2.1
 <img width="1919" height="1035" alt="task 2 1" src="https://github.com/user-attachments/assets/79dbdac5-a30a-4759-ab92-1347b19815d5" />
 2.2
